@@ -8,6 +8,7 @@ import { map } from 'rxjs/operators';
   templateUrl: './product-category.component.html',
   styleUrls: ['./product-category.component.css']
 })
+
 export class ProductCategoryComponent implements OnInit, OnDestroy {
 
   subscription: Subscription;
@@ -17,7 +18,7 @@ export class ProductCategoryComponent implements OnInit, OnDestroy {
   constructor(private categoryService: CategoryService) { }
 
   ngOnInit() {
-
+    this.subscription = this.getCategoriesList();
   }
 
   getCategoriesList() {
