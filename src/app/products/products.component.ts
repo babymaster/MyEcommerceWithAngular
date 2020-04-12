@@ -1,3 +1,4 @@
+import { ProductService } from './../product.service';
 import { AppShoppingCart } from './../models/shoppingcart';
 import { AppProducts } from './../models/app-products';
 import { Subscription } from 'rxjs';
@@ -19,7 +20,7 @@ export class ProductsComponent implements OnInit {
   cart: AppShoppingCart;
   filteredProducts: AppProducts[] = [];
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private productService: ProductService) { }
 
   ngOnInit() {
   }
