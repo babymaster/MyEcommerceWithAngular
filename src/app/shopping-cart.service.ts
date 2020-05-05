@@ -52,7 +52,7 @@ export class ShoppingCartService {
     }
 
     let result = this.create();
-    localStorage.setItem('cartId', result);
+    localStorage.setItem('cartId', result.key);
     return result.key;
   }
 

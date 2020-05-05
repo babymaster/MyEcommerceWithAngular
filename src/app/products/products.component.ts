@@ -56,4 +56,10 @@ export class ProductsComponent implements OnInit {
     this.filteredProducts = (this.category) ? this.products.filter(p => p.category === this.category) : this.products;
     console.log('filter ', this.filteredProducts);
   }
+
+  ngOnDestroy() {
+    if(this.subscription) this.subscription.unsubscribe();
+    if(this.subscription1) this.subscription1.unsubscribe();
+    if(this.subscription2) this.subscription2.unsubscribe();
+  }
 }
